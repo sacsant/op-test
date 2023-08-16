@@ -115,7 +115,7 @@ class PowerNVDump(unittest.TestCase):
             try: self.mem_resource = conf.args.mem_resource
             except AttributeError:
                 self.mem_resource = 2048
-        self.dump_server_user = conf.args.dump_server_user if 'dump_server_user' in conf.args else 'root' 
+        self.dump_server_user = conf.args.dump_server_user if 'dump_server_user' in conf.args else 'root'
         self.dump_server_ip = conf.args.dump_server_ip if 'dump_server_ip' in conf.args else ''
         self.dump_server_pw = conf.args.dump_server_pw if 'dump_server_pw' in conf.args else ''
         self.dump_path = conf.args.dump_path if 'dump_path' in conf.args else ''
@@ -181,7 +181,7 @@ class PowerNVDump(unittest.TestCase):
     def is_fadump_param_enabled(self):
         '''
         Method to verify fadump kernel parameter is set
-        returns True if fadump=on 
+        returns True if fadump=on
         '''
         res = self.cv_HOST.host_run_command(BMC_CONST.PROC_CMDLINE)
         if "fadump=on" in " ".join(res):
@@ -203,7 +203,7 @@ class PowerNVDump(unittest.TestCase):
 
     def is_fadump_supported(self):
         '''
-        Methods checks if fadump is supported 
+        Methods checks if fadump is supported
         '''
         try:
             self.c.run_command("ls /sys/kernel/fadump/enabled")
@@ -225,7 +225,7 @@ class PowerNVDump(unittest.TestCase):
     def is_mpipl_boot(self):
         '''
         Method to verify MPIPL boot
-        ''' 
+        '''
         try:
             self.c.run_command("ls %s/mpipl-boot 2>/dev/null" % BMC_CONST.OPAL_DUMP_NODE)
             return True
@@ -303,7 +303,7 @@ class PowerNVDump(unittest.TestCase):
         '''
         res = self.c.run_command("cat /sys/kernel/fadump/registered")[-1]
         if int(res) == 1:
-            return True 
+            return True
         else:
             self.c.run_command("echo 1 > /sys/kernel/fadump/registered; sleep 10")
             self.c.run_command("cat /sys/kernel/fadump/registered")
@@ -338,7 +338,7 @@ class PowerNVDump(unittest.TestCase):
         '''
         res = self.c.run_command("cat /sys/kernel/fadump/registered")[-1]
         if int(res) == 0:
-            return True 
+            return True
         else:
             self.c.run_command("echo 0 > /sys/kernel/fadump/registered; sleep 10")
 
@@ -366,7 +366,7 @@ class PowerNVDump(unittest.TestCase):
 
     def kernel_crash(self, crash_type="echo_c"):
         '''
-        This function will test the kernel crash followed by system 
+        This function will test the kernel crash followed by system
         reboot. It has below steps
             1. Enable reboot on kernel panic: echo 10 > /proc/sys/kernel/panic
             2. Trigger kernel crash: echo c > /proc/sysrq-trigger
@@ -630,7 +630,7 @@ class SBECrash_MPIPL(PowerNVDump):
 
 class KernelCrash_FadumpEnable(PowerNVDump):
     '''
-    This Class test KDUMP functionality with firmware assisted dump enabled 
+    This Class test KDUMP functionality with firmware assisted dump enabled
     It performs all similar steps as kdump with fadump=on in kernel commandline
     '''
 
@@ -645,7 +645,7 @@ class KernelCrash_FadumpEnable(PowerNVDump):
             time.sleep(10)
             self.c.run_command("sed -e '/nfs/ s/^#*/#/' -i /etc/kdump.conf; sync")
             obj = OpTestInstallUtil.InstallUtil()
-            if not obj.update_kernel_cmdline(self.distro, args="fadump=on",
+            if not obj.update_kernel_cmdline(self.distro, args="fadump=on crashkernel=2G-128G:4096M,128G-:8192M",
                                              reboot=True, reboot_cmd=True):
                 self.fail("KernelArgTest failed to update kernel args")
         if self.distro == "sles":
@@ -987,7 +987,7 @@ class KernelCrash_KdumpSAN(PowerNVDump):
 
 class KernelCrash_KdumpSMT(PowerNVDump):
     '''
-    This test tests kdump/fadump with smt=1,2,4 and 
+    This test tests kdump/fadump with smt=1,2,4 and
     kdump/fadump with smt=1,2,4 and dumprestart from HMC.
     '''
 
@@ -1133,7 +1133,7 @@ class KernelCrash_hugepage_checks(PowerNVDump):
 
 class KernelCrash_XIVE_off(PowerNVDump):
     '''
-    This test checks kdump/fadump with kernel parameter option xive=off 
+    This test checks kdump/fadump with kernel parameter option xive=off
     with different levels of SMT levels
     '''
 
@@ -1343,12 +1343,12 @@ class KernelCrash_KdumpPMEM(PowerNVDump):
             self.c.run_command("ndctl create-namespace -m fsdax -r region%s" % self.pmem_id)
         except CommandFailed:
             try: self.c.run_command("ndctl destroy-namespace all -f")
-            except CommandFailed: 
+            except CommandFailed:
                 self.c.run_command("umount /pmem%s" % self.pmem_id)
                 self.c.run_command("ndctl destroy-namespace all -f")
                 self.c.run_command("ndctl create-namespace -m fsdax -r region%s" % self.pmem_id)
         try: self.c.run_command("mkfs.xfs -f -b size=64k -s size=4k -m reflink=0 /dev/pmem%s" % self.pmem_id)
-        except CommandFailed: 
+        except CommandFailed:
             self.c.run_command("umount /pmem%s" % self.pmem_id)
             self.c.run_command("mkfs.xfs -f -b size=64k -s size=4k -m reflink=0 /dev/pmem%s" % self.pmem_id)
         self.c.run_command("mkdir -p /pmem%s" % self.pmem_id)
