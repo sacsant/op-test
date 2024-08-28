@@ -160,7 +160,7 @@ class InstallUpstreamKernel(unittest.TestCase):
                 elif self.host_distro_name in ['sles', 'SLES']:
                     con.run_command('%s /boot/vmlinu*-`uname -r`' % gruby_cmd)
                 con.run_command(
-                    "grub2-mkconfig  --output=/boot/grub2/grub.cfg")
+                    "grub2-mkconfig  --output=/boot/grub2/grub.cfg --update-bls-cmdline")
                 con.run_command(kexec_cmdline)
                 boot_cmd = 'kexec -e'
             self.console_thread.console_terminate()
