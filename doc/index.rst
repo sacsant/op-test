@@ -22,7 +22,14 @@ Programming Reference
 
    programming
 
+Functional Diagram
+==================
 
+The following diagram provides a high-level view of the op-test workflow.
+
+.. image:: functional_diagram.png
+   :alt: OpenPOWER Test Framework Functional Diagram
+   :align: center
 
 Indices and tables
 ==================

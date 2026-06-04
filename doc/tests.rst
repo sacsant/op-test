@@ -7,19 +7,25 @@ The Tests
 .. automodule:: testcases.BasicIPL
    :members:
 
+.. automodule:: testcases.BisectKernel
+   :members:
+
 .. automodule:: testcases.BMCResetTorture
    :members:
 
 .. automodule:: testcases.BootTorture
    :members:
 
-.. automodule:: testcases.ConsoleBug150765
-   :members:
-
 .. automodule:: testcases.Console
    :members:
 
+.. automodule:: testcases.ConsoleBug150765
+   :members:
+
 .. automodule:: testcases.CpuHotPlug
+   :members:
+
+.. automodule:: testcases.Crashtool
    :members:
 
 .. automodule:: testcases.DeviceTreeValidation
@@ -29,6 +35,9 @@ The Tests
    :members:
 
 .. automodule:: testcases.DPO
+   :members:
+
+.. automodule:: testcases.EMStress
    :members:
 
 .. automodule:: testcases.EnergyScale_BaseLine
@@ -49,10 +58,19 @@ The Tests
 .. automodule:: testcases.gcov
    :members:
 
+.. automodule:: testcases.GcovSetup
+   :members:
+
+.. automodule:: testcases.grub
+   :members:
+
 .. automodule:: testcases.HelloWorld
    :members:
 
 .. automodule:: testcases.I2C
+   :members:
+
+.. automodule:: testcases.IMC_bug
    :members:
 
 .. automodule:: testcases.InstallHostOS
@@ -64,6 +82,9 @@ The Tests
 .. automodule:: testcases.InstallUbuntu
    :members:
 
+.. automodule:: testcases.InstallUpstreamKernel
+   :members:
+
 .. automodule:: testcases.IplParams
    :members:
 
@@ -73,7 +94,16 @@ The Tests
 .. automodule:: testcases.KernelLog
    :members:
 
+.. automodule:: testcases.Lcov
+   :members:
+
 .. automodule:: testcases.LightPathDiagnostics
+   :members:
+
+.. automodule:: testcases.MachineConfig
+   :members:
+
+.. automodule:: testcases.NX842
    :members:
 
 .. automodule:: testcases.OpalErrorLog
@@ -91,7 +121,16 @@ The Tests
 .. automodule:: testcases.OpalUtils
    :members:
 
+.. automodule:: testcases.OpenBMCReset
+   :members:
+
 .. automodule:: testcases.OpTestCAPI
+   :members:
+
+.. automodule:: testcases.OpTestDlpar
+   :members:
+
+.. automodule:: testcases.OpTestDlparIO
    :members:
 
 .. automodule:: testcases.OpTestDumps
@@ -103,6 +142,9 @@ The Tests
 .. automodule:: testcases.OpTestEM
    :members:
 
+.. automodule:: testcases.OpTestEnergyd
+   :members:
+
 .. automodule:: testcases.OpTestEnergyScale
    :members:
 
@@ -112,10 +154,22 @@ The Tests
 .. automodule:: testcases.OpTestFastReboot
    :members:
 
+.. automodule:: testcases.OpTestGSBStaticKey
+   :members:
+
 .. automodule:: testcases.OpTestHeartbeat
    :members:
 
 .. automodule:: testcases.OpTestHMIHandling
+   :members:
+
+.. automodule:: testcases.OpTestHostboot
+   :members:
+
+.. automodule:: testcases.OpTestHtxBootme
+   :members:
+
+.. automodule:: testcases.OpTestHugepage
    :members:
 
 .. automodule:: testcases.OpTestInbandIPMI
@@ -130,7 +184,28 @@ The Tests
 .. automodule:: testcases.OpTestIPMIReprovision
    :members:
 
-.. automodule:: testcases.OpTestKernel
+.. automodule:: testcases.OpTestKernelArg
+   :members:
+
+.. automodule:: testcases.OpTestKernelDump
+   :members:
+
+.. automodule:: testcases.OpTestKernelTest
+   :members:
+
+.. automodule:: testcases.OpTestKexec
+   :members:
+
+.. automodule:: testcases.OpTestKuepKuap
+   :members:
+
+.. automodule:: testcases.OpTestLparFreq
+   :members:
+
+.. automodule:: testcases.OpTestLPM
+   :members:
+
+.. automodule:: testcases.OpTestMamboSim
    :members:
 
 .. automodule:: testcases.OpTestMtdPnorDriver
@@ -142,10 +217,10 @@ The Tests
 .. automodule:: testcases.OpTestOCC
    :members:
 
-.. automodule:: testcases.OpTestOpenCAPI
+.. automodule:: testcases.OpTestOOBIPMI
    :members:
 
-.. automodule:: testcases.OpTestOOBIPMI
+.. automodule:: testcases.OpTestOpenCAPI
    :members:
 
 .. automodule:: testcases.OpTestPCI
@@ -166,6 +241,9 @@ The Tests
 .. automodule:: testcases.OpTestRTCdriver
    :members:
 
+.. automodule:: testcases.OpTestSecvarctl
+   :members:
+
 .. automodule:: testcases.OpTestSensors
    :members:
 
@@ -175,13 +253,31 @@ The Tests
 .. automodule:: testcases.OpTestSystemBootSequence
    :members:
 
+.. automodule:: testcases.OpTestVpmemBugFixTest
+   :members:
+
+.. automodule:: testcases.OsSecureBoot
+   :members:
+
 .. automodule:: testcases.PciSlotLocCodes
+   :members:
+
+.. automodule:: testcases.Petitboot10000Disks
+   :members:
+
+.. automodule:: testcases.PetitbootCancelBoot
+   :members:
+
+.. automodule:: testcases.PetitbootConfig
    :members:
 
 .. automodule:: testcases.PetitbootDropbearServer
    :members:
 
 .. automodule:: testcases.Petitbooti18n
+   :members:
+
+.. automodule:: testcases.PetitbootMMU
    :members:
 
 .. automodule:: testcases.RunHostTest
@@ -194,6 +290,9 @@ The Tests
    :members:
 
 .. automodule:: testcases.SystemLogin
+   :members:
+
+.. automodule:: testcases.testCronus
    :members:
 
 .. automodule:: testcases.testRestAPI

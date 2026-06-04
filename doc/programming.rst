@@ -24,6 +24,13 @@ OPExpect
    :members:
    :undoc-members:
 
+OpTestConfiguration
+-------------------
+
+.. automodule:: OpTestConfiguration
+   :members:
+   :undoc-members:
+
 OpTestSystem
 ------------
 
@@ -52,6 +59,97 @@ OpTestIPMI
    :members:
    :undoc-members:
 
+OpTestCommandExecutor
+---------------------
+
+.. automodule:: common.OpTestCommandExecutor
+   :members:
+   :undoc-members:
+
+OpTestConnectionManager
+-----------------------
+
+.. automodule:: common.OpTestConnectionManager
+   :members:
+   :undoc-members:
+
+OpTestInstallUtil
+-----------------
+
+.. automodule:: common.OpTestInstallUtil
+   :members:
+   :undoc-members:
+
+OpTestKeys
+----------
+
+.. automodule:: common.OpTestKeys
+   :members:
+   :undoc-members:
+
+OpTestSOL
+---------
+
+.. automodule:: common.OpTestSOL
+   :members:
+   :undoc-members:
+
+OpTestSSH
+---------
+
+.. automodule:: common.OpTestSSH
+   :members:
+   :undoc-members:
+
+OpTestSSHConnection
+-------------------
+
+.. automodule:: common.OpTestSSHConnection
+   :members:
+   :undoc-members:
+
+OpTestSysinfo
+-------------
+
+.. automodule:: common.OpTestSysinfo
+   :members:
+   :undoc-members:
+
+OpTestTConnection
+-----------------
+
+.. automodule:: common.OpTestTConnection
+   :members:
+   :undoc-members:
+
+OpTestThread
+------------
+
+.. automodule:: common.OpTestThread
+   :members:
+   :undoc-members:
+
+OpTestUtil
+----------
+
+.. automodule:: common.OpTestUtil
+   :members:
+   :undoc-members:
+
+OpTestWeb
+---------
+
+.. automodule:: common.OpTestWeb
+   :members:
+   :undoc-members:
+
+SerialConsole
+-------------
+
+.. automodule:: common.SerialConsole
+   :members:
+   :undoc-members:
+
 BMC/Machine Specific
 ====================
 
@@ -69,10 +167,17 @@ OpTestBMC
    :members:
    :undoc-members:
 
-OpTestOpenBMC
--------------
+OpTestCronus
+------------
 
-.. automodule:: common.OpTestOpenBMC
+.. automodule:: common.OpTestCronus
+   :members:
+   :undoc-members:
+
+OpTestEBMC
+----------
+
+.. automodule:: common.OpTestEBMC
    :members:
    :undoc-members:
 
@@ -87,6 +192,20 @@ OpTestHMC
 ---------
 
 .. automodule:: common.OpTestHMC
+   :members:
+   :undoc-members:
+
+OpTestMambo
+-----------
+
+.. automodule:: common.OpTestMambo
+   :members:
+   :undoc-members:
+
+OpTestOpenBMC
+-------------
+
+.. automodule:: common.OpTestOpenBMC
    :members:
    :undoc-members:
 
@@ -109,3 +228,4 @@ Firmware Flashing
 
 .. automodule:: testcases.OpTestFlash
    :members:
+   :undoc-members:
