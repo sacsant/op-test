@@ -11,10 +11,8 @@ Command Line Options
 All configuration options can be specified via the command line or in a
 configuration file (see :ref:`config-file`).
 
-.. argparse::
-   :module: OpTestConfiguration
-   :func: get_parser
-   :prog: op-test
+.. note::
+   For a complete list of command line options, run ``op-test --help``.
 
 .. _config-file:
 
