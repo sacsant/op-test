@@ -338,7 +338,7 @@ class HMCUtil():
         '''
         Set LPAR configuration parameter values
 
-        :param arg_str: configuration values in key, value pair seperated by
+        :param arg_str: configuration values in key, value pair separated by
                         comma
         '''
         lpar_profile = self.lpar_prof if lpar_profile is None else lpar_profile
@@ -351,7 +351,7 @@ class HMCUtil():
         """
         Adds ioslots to lpar profile
         :param add_ioslot: String, accepts drc name or drc names
-                           seperated by comma(,)
+                           separated by comma(,)
         drc name example: U780C.ND0.WZS0042-P1-C2
         :param lpar_profile: String, Defaults to class variable
                              if not provided
@@ -377,7 +377,7 @@ class HMCUtil():
         """
         Removes ioslots from lpar profile
         :param remove_ioslot: String, accepts drc name or drc names
-                           seperated by comma(,)
+                           separated by comma(,)
         drc name example: U780C.ND0.WZS0042-P1-C2
         :optional_param lpar_profile: String, Defaults to class variable
                              if not provided

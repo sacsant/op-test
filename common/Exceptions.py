@@ -228,7 +228,7 @@ class KernelFADUMP(Exception):
 class KernelCrashUnknown(Exception):
     '''
     Kernel crashed but it didn't reach the end failure condition
-    (i.e a timeout occured)
+    (i.e a timeout occurred)
     '''
 
     def __init__(self, state, log):

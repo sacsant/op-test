@@ -17,12 +17,12 @@
 * CC      Dump from Cache Contained AVP
 * CCRN    Dump from Cache Contained AVP in Run-N mode
 *
-* SAPH    Dump for saphire (non MPIPL, grab mem contents on the way down) -- different memory memory contents than HB
+* SAPH    Dump for sapphire (non MPIPL, grab mem contents on the way down) -- different memory contents than HB
 * HB      Dump for HB (non MPIPL, grab memory contents on the way down, may only have 1 core)
 *
-* SW      Phyp initated dump (MPIPL) -- architected state, memory, nest trace
-* USER    User iniated dump from panl/ASM to caputre SW state --  MPIPL
-* SH      Dump for HW checkstop, but perserved memory --> SW + Quads: trace arrays, rings, fastarray
+* SW      Phyp initiated dump (MPIPL) -- architected state, memory, nest trace
+* USER    User initiated dump from panel/ASM to capture SW state --  MPIPL
+* SH      Dump for HW checkstop, but preserved memory --> SW + Quads: trace arrays, rings, fastarray
 *
 * HWCPLCL Local Core checkstop --> Cumulus only feature -- don't forget -cfail!
 *
@@ -59,7 +59,7 @@ HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL          
 HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 2806 -kall -nall -pall ec 10+     # CBS last event log
 HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 2808 -kall -nall -pall ec 10+     # SBE control/status
 HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 2809 -kall -nall -pall ec 10+     # SBE message
-HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 280B -kall -nall -pall ec 10+     # CBS exteded status
+HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 280B -kall -nall -pall ec 10+     # CBS extended status
 HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 2810 -kall -nall -pall ec 10+
 HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 2811 -kall -nall -pall ec 10+
 HWPROC | CS | CC | CCRN | OTHER | SAPH | HB | SW | SH | USER | HWCPLCL               getcfam pu 2812 -kall -nall -pall ec 10+

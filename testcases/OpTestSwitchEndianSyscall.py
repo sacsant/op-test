@@ -59,7 +59,7 @@ log = OpTestLogger.optest_logger_glob.get_logger(__name__)
 
 class OpTestSwitchEndianSyscall(unittest.TestCase):
     '''
-    If git and gcc commands are availble on host, this function will clone linux
+    If git and gcc commands are available on host, this function will clone linux
     git repository and check for switch_endian_test directory and make
     the required files. And finally execute bin file switch_endian_test.
     '''
@@ -92,7 +92,7 @@ class OpTestSwitchEndianSyscall(unittest.TestCase):
         # Run the switch_endian sys call test once
         l_rc = self.run_once(l_dir)
         if int(l_rc) == 1:
-            log.debug("Switch endian sys call test got succesful")
+            log.debug("Switch endian sys call test got successful")
             return
         else:
             raise "Switch endian sys call test failed"

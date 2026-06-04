@@ -148,7 +148,7 @@ class OpTestEEH(unittest.TestCase):
         for each EEH iteration instead of full logs.
 
         This should make it easier to debug problems as you'll have
-        the specific log messages that occured for each test.
+        the specific log messages that occurred for each test.
         '''
         cmd = "grep ',[0-4]\]' /sys/firmware/opal/msglog | diff - /tmp/opal_msglog"
         self.cv_SYSTEM.console.run_command_ignore_fail(cmd)

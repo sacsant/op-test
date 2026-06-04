@@ -910,7 +910,7 @@ class OpTestUtil():
         lock_dict['Group_Name'] = None
         lock_dict['envs'] = environments
         # we did not find anything able to be reserved
-        # return the list we looked thru
+        # return the list we looked through
         return lock_dict
 
     def hostlocker_lock(self, args):

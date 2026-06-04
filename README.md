@@ -123,7 +123,7 @@ To get a list of test suites:
 
     ./op-test --bmc-type AMI --list-suites
 
-You cun run one or more suites by using the `--run-suite` command line option.
+You can run one or more suites by using the `--run-suite` command line option.
 For example, you can choose to run tests that are only at the petitboot
 command line. By default, the test runner doesn't know what state the machine
 is in, so will attempt to turn everything off to get it into a known state.

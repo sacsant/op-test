@@ -31,7 +31,7 @@ mconfig memory MEM_SIZE 4G
 # on each chip (CPUS above).
 mconfig numa MAMBO_NUMA 0
 
-# Should we stop on an illeagal instruction
+# Should we stop on an illegal instruction
 mconfig stop_on_ill MAMBO_STOP_ON_ILL false
 
 # Location of application binary to load
@@ -51,7 +51,7 @@ mconfig payload PAYLOAD $env(SKIBOOT_ZIMAGE)
 
 mconfig linux_cmdline LINUX_CMDLINE ""
 
-# Paylod: Memory location for a Linux style ramdisk/initrd
+# Payload: Memory location for a Linux style ramdisk/initrd
 mconfig payload_addr PAYLOAD_ADDR 0x20000000;
 
 # FW: Where should ePAPR Flat Devtree Binary be loaded

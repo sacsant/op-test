@@ -365,7 +365,7 @@ class BasicIPLSuite():
         return BasicIPL.suite()
 
 class KernelArgsSuite():
-    '''Passing the Kernel comdline argument'''
+    '''Passing the Kernel cmdline argument'''
     def __init__(self):
         self.s = unittest.TestSuite()
         self.s.addTest(OpTestKernelArg.OpTestKernelArg())
